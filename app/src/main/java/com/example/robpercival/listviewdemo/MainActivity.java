@@ -2,7 +2,6 @@ package com.example.robpercival.listviewdemo;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,8 +11,6 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-
-import static java.util.Arrays.asList;
 
 
 public class MainActivity extends Activity {
@@ -25,7 +22,14 @@ public class MainActivity extends Activity {
 
         ListView friendsListView = (ListView)findViewById(R.id.friendsListView);
 
-        final ArrayList<String> myFriends = new ArrayList<String>(asList("John", "Paul", "George", "Ringo"));
+        final ArrayList<String> myFriends = new ArrayList<String>();
+
+        myFriends.add("Sam");
+        myFriends.add("Rungene");
+        myFriends.add("Mr Wonderful");
+        myFriends.add("Nyambura");
+        myFriends.add("John");
+        myFriends.add("Kinyajui");
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, myFriends);
 
